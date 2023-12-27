@@ -1,10 +1,7 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity, linear_kernel
-from scipy.sparse import hstack, csr_matrix, vstack
-import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 import os
-import ast
 
 # USES OTT DATASETS
 
@@ -100,7 +97,7 @@ def main():
     
     # MOVIE: CHANGE AS NEEDED
     movie_title = 'The Dark Knight'
-    
+
     recommendations = get_recommendations(movie_title, processed_data, 10)
     print(recommendations)
 
