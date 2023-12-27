@@ -3,8 +3,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
 
-# USES OTT DATASETS
-
 def preprocess_data(folder, processed_data_path):
     amazonprime = pd.read_csv(folder + 'amazonprime.csv')
     appletv = pd.read_csv(folder + 'appletv.csv')
