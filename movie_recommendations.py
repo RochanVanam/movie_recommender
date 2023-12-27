@@ -94,8 +94,8 @@ def main():
         processed_data = pd.read_csv(processed_data_path)
     
     # MOVIE: CHANGE AS NEEDED
-    movie_title = 'The Dark Knight'
-
+    movie_title = input("Find recommendations based on title: ")
+    print()
     recommendations = get_recommendations(movie_title, processed_data, 10)
     print(recommendations)
 
