@@ -94,10 +94,14 @@ def main():
         processed_data = pd.read_csv(processed_data_path)
     
     # MOVIE: CHANGE AS NEEDED
-    movie_title = input("Find recommendations based on title: ")
-    print()
-    recommendations = get_recommendations(movie_title, processed_data, 10)
-    print(recommendations)
+    while True:
+        movie_title = input("Find recommendations based on title: ")
+        if movie_title in processed_data['title'].values:
+            recommendations = get_recommendations(movie_title, processed_data, 10)
+            print(recommendations)
+        else:
+            print(f"{movie_title} is not in the datasets.")
+        print()
 
 if __name__ == "__main__":
     main()
