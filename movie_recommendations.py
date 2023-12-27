@@ -93,7 +93,6 @@ def main():
     else:
         processed_data = pd.read_csv(processed_data_path)
     
-    # MOVIE: CHANGE AS NEEDED
     while True:
         movie_title = input("Find recommendations based on title: ")
         if movie_title in processed_data['title'].values:
